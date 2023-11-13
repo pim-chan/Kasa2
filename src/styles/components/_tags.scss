@@ -1,0 +1,24 @@
+.tags__container {
+    display: flex;
+    margin: 23px 0;
+    gap: 15px;
+    font-size: $tag-name;
+    .tag {
+        padding: 5px 45px;
+        background-color: $main-color;
+        color: $text-color2;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tags__container {
+        font-size: $resp-tag-name;
+        font-family: $font1-light;
+        margin: 10px 0;
+        .tag {
+            padding: 3px 20px;
+        }
+    }
+
+}

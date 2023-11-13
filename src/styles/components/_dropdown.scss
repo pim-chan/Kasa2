@@ -1,0 +1,166 @@
+.dropdown {
+    width: 70%;
+    color: $main-color;
+    &__title-container {
+        padding: 0 20px 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        background-color: $main-color;
+        z-index: 10;
+        position: relative;
+    }
+}
+
+.dropdown__arrow {
+   transition: transform 0.3s ease;
+   &--rotated {
+        transform: rotate(180deg);
+    }
+}
+
+.dropdown__text-container {
+    font-family: $font1-thin;
+    font-weight: bold;
+    line-height: 25px;
+    border-radius: 0 0 5px 5px;
+    background-color: $secondary-color;
+    max-height: 0;
+    overflow: hidden;
+    ul {
+        list-style: none;
+    }
+}
+
+.dropdown__text {
+    padding: 20px 10px;
+}
+
+
+/* Animation de d'ouverture */
+.dropdown__text-container.show {
+    animation: slide-in 0.5s ease-in-out 1 forwards;
+}
+
+.dropdown__text-container.hide {
+    animation : slide-out 0.5s ease-in-out 1 forwards;
+    
+}
+
+/* Animation de d'ouverture */
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+    100% {
+        opacity: 1;
+        max-height: 100%;
+    }
+  }
+
+
+/* Animation de fermeture */
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+        max-height: fit-content;
+    }
+    60% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+}
+
+
+// ABOUT
+.a-dropdowns-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 31px;
+    margin: 31px 0;
+    .dropdown__title-container {
+        height: 47px;  
+        h3 {
+            color: $text-color2;
+            font-family: $font1-light;
+            font-size: $text;
+        }
+    }
+}
+
+// FICHE LOGEMENT
+.fl-dropdowns-container {
+    margin: 0 100px 42px;
+    display: flex;
+    gap: 65px;
+    .dropdown__title-container {
+        height: 52px;    
+        h3 {
+        color: $text-color2;
+        font-family: $font1-light;
+        font-size: $sub-text;
+        }
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .dropdown {
+        width: 90%;
+        &__text-container {
+        font-size: $resp-subtext;
+        }
+        &__title-container {
+        font-size: $resp-text;
+        }
+    }
+
+    .fl-dropdowns-container {
+        margin: 0 auto 20px;
+        flex-direction: column;
+        width: 90%;
+        gap: 20px;
+        .dropdown {
+            width: 100%;
+        }
+        .dropdown__title-container { 
+            height: 30px;
+            h3 {
+            font-size: $resp-text;
+            }
+        }
+    }
+
+    .a-dropdowns-container {
+        gap: 25px;
+        .dropdown__title-container {
+            height: 30px;  
+            h3 {
+                font-size: $resp-text;
+            }
+        }
+    }
+
+    .dropdown__arrow-trigger {
+        height: 10px;
+     }
+}
+
+
+          
+

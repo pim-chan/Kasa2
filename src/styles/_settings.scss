@@ -1,0 +1,51 @@
+// FONT SIZE
+$title: 3rem;
+$subtitle: 2.25rem;
+$text: 1.5rem;
+$sub-text: 1.125rem;
+$tag-name: 0.875rem;
+
+$error-title : 18rem;
+
+$resp-error-title : 6rem;
+
+$resp-subtitle : 1.125rem;
+$resp-text : 0.813rem;
+$resp-subtext : 0.75rem;
+$resp-tag-name : 0.625rem;
+
+//COLORS
+$main-color : #FF6060; 
+$secondary-color : #F6F6F6;
+$third-color : #000000;
+$text-color : #FF6060; 
+$text-color2 : #FFFFFF; 
+
+// FONTS
+@font-face {
+    font-family: "Montserrat";
+    src: url(../../src/assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "Montserrat-thin";
+    src: url(../../src/assets/fonts/Montserrat-Thin.ttf);
+}
+@font-face {
+    font-family: "Montserrat-light";
+    src: url(../../src/assets/fonts/Montserrat-ExtraLight.ttf);
+}
+
+$font1 : "Monserrat", sans-serif;
+$font1-light : "Montserrat-light", sans-serif;
+$font1-thin : "Montserrat-thin", sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font1;
+}
+
